@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainUserLogin:Button
     private lateinit var mainUserReg : Button
     private lateinit var mainUserRecover : Button
+    private lateinit var submit : Button
 
     private lateinit var mAuth : FirebaseAuth
 
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         mainUserLogin = findViewById(R.id.startLogin)
         mainUserReg = findViewById(R.id.startReg)
         mainUserRecover = findViewById(R.id.startRecover)
+        submit = findViewById(R.id.submit)
 
 
 
@@ -72,6 +74,10 @@ class MainActivity : AppCompatActivity() {
 
         mainUserRecover.setOnClickListener{
             startActivity(Intent(this,LostPassword::class.java))
+        }
+
+        submit.setOnClickListener{
+            startActivity(Intent(this,SubmitActivity::class.java))
         }
 
 
